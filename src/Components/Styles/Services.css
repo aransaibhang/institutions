@@ -1,0 +1,30 @@
+.card:hover {
+    box-shadow: 0 0 10px rgba(0, 0, 0, 0.3); /* Add a shadow when hovered */
+  }
+.card{
+    background-color: #f8f9fa;
+    width: 26rem;
+    height: 8.5rem !important; 
+    box-shadow: 0 0 10px rgba(0, 0, 0, 0.2);
+}
+
+  .card-content {
+    display: flex;
+    align-items: center;
+  }
+
+  @keyframes fade-in-bottom-right {
+    0% {
+      opacity: 0;
+      transform: translate(20px, 20px);
+    }
+    100% {
+      opacity: 1;
+      transform: translate(0, 0);
+    }
+  }
+  
+  .fade-in-bottom-right {
+    animation: fade-in-bottom-right 1s ease-in-out forwards;
+  }
+  

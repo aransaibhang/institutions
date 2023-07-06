@@ -3,6 +3,7 @@
   }
 .card{
     background-color: #f8f9fa;
+    
     width: 26rem;
     height: 8.5rem !important; 
     box-shadow: 0 0 10px rgba(0, 0, 0, 0.2);
@@ -27,4 +28,6 @@
   .fade-in-bottom-right {
     animation: fade-in-bottom-right 1s ease-in-out forwards;
   }
+ 
   
+

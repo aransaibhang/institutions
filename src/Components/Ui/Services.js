@@ -3,13 +3,7 @@ import "../Styles/Services.css";
 import AOS from "aos";
 import "aos/dist/aos.css";
 import { useEffect } from "react";
-import {
-  BiBriefcase,
-  BiBook,
-  BiCardChecklist,
-  BiBinoculars,
-  BiGlobe,
-} from "react-icons/bi";
+import { BiBriefcase, BiBook, BiGlobe } from "react-icons/bi";
 export default function Services() {
   useEffect(() => {
     AOS.init({
@@ -87,21 +81,58 @@ export default function Services() {
               </div>
             </div>
 
-            <div class="col-lg-4 col-md-6 mt-5">
+            <div className="col-lg-4 col-md-6 mt-5">
               <div
-                class="icon-box aos-init aos-animate card"
+                className="icon-box aos-init aos-animate card"
                 data-aos="zoom-in-left"
                 data-aos-delay="300"
               >
                 <div className="icon">
                   <BiBook color="#41cf2e" />
                 </div>
-                <h4 class="title">
-                  <a href="">Magni Dolores</a>
+                <h4 className="title">
+                  <a>Magni Dolores</a>
                 </h4>
-                <p class="description">
+                <p className="description">
                   Excepteur sint occaecat cupidatat non proident, sunt in culpa
                   qui officia deserunt mollit anim id est laborum
+                </p>
+              </div>
+            </div>
+            <div className="col-lg-4 col-md-6 mt-5">
+              <div
+                className="icon-box aos-init aos-animate card"
+                data-aos="zoom-in-left"
+                data-aos-delay="400"
+              >
+                <div className="icon">
+                  <BiBook color="#d6ff22" />
+                </div>
+                <h4 className="title">
+                  <a>Nemo Enim</a>
+                </h4>
+                <p className="description">
+                  At vero eos et accusamus et iusto odio dignissimos ducimus qui
+                  blanditiis praesentium voluptatum deleniti atque
+                </p>
+              </div>
+            </div>
+
+            <div className="col-lg-4 col-md-6 mt-5">
+              <div
+                className="icon-box aos-init aos-animate card"
+                data-aos="zoom-in-left"
+                data-aos-delay="500"
+              >
+                <div className="icon">
+                  <BiBook color="#4680ff" />
+                </div>
+                <h4 className="title">
+                  <a>Eiusmod Tempor</a>
+                </h4>
+                <p className="description">
+                  Et harum quidem rerum facilis est et expedita distinctio. Nam
+                  libero tempore, cum soluta nobis est eligendi
                 </p>
               </div>
             </div>
@@ -111,5 +142,3 @@ export default function Services() {
     </>
   );
 }
-
-

@@ -1,12 +1,13 @@
 .card:hover {
-    box-shadow: 0 0 10px rgba(0, 0, 0, 0.3); /* Add a shadow when hovered */
+    box-shadow: 0 0 10px rgba(0, 0, 0, 0.3) !important; /* Add a shadow when hovered */
   }
 .card{
     background-color: #f8f9fa;
+    border: 'none';
+    width: 21.8rem !important;
+    height: 7.5rem !important; 
+    box-shadow: 0 0 0 rgba(0, 0, 0, 0.2) !important;
     
-    width: 26rem;
-    height: 8.5rem !important; 
-    box-shadow: 0 0 10px rgba(0, 0, 0, 0.2);
 }
 
   .card-content {
@@ -28,6 +29,87 @@
   .fade-in-bottom-right {
     animation: fade-in-bottom-right 1s ease-in-out forwards;
   }
- 
+ .briefcase{
+  
+  color: #ff689b;
+ }
   
 
+ .section-title h2 {
+  font-size: 14px;
+  font-weight: 500;
+  padding: 0;
+  line-height: 1px;
+  margin: 0 0 5px 0;
+  letter-spacing: 2px;
+  text-transform: uppercase;
+  color: #aaaaaa;
+  font-family: "Poppins", sans-serif;
+  display: block;
+  
+  margin-block-start: 0.83em;
+  margin-block-end: 0.83em;
+  margin-inline-start: 0px;
+  margin-inline-end: 0px;
+ 
+}
+.section-title p {
+  margin: 0;
+  margin: 0;
+  font-size: 36px;
+  font-weight: 700;
+  text-transform: uppercase;
+  font-family: "Poppins", sans-serif;
+  color: #2a2c39;
+}
+.row {
+  --bs-gutter-x: 1.5rem;
+  --bs-gutter-y: 0;
+  display: flex;
+  flex-wrap: wrap;
+  margin-top: calc(-1 * var(--bs-gutter-y));
+  margin-right: calc(-.5 * var(--bs-gutter-x));
+  margin-left: calc(-.5 * var(--bs-gutter-x));
+  margin-top: 3rem !important;
+}
+.services .icon {
+  font-size: 64px;
+  position: absolute;
+  left: 2px;
+  top: calc(50% - 58px);
+}
+.services .icon-box {
+  padding: 30px;
+  position: relative;
+  overflow: hidden;
+  border-radius: 10px;
+  background: #fff;
+  box-shadow: 0 2px 29px 0 rgba(68, 88, 144, 0.12);
+  transition: all 0.4s ease-in-out;
+  width: 100%;
+  height: 100%;
+}
+.services .title {
+  margin-left: 40px;
+  font-weight: 700;
+  margin-bottom: 2px;
+  margin-top: -19px;
+  font-size: 18px;
+}
+
+.services .description {
+  font-size: 11px;
+  margin-left: 40px;
+  line-height: 24px;
+  margin-bottom: 10px;
+}
+p {
+  margin-top: 0;
+  margin-bottom: 1rem;
+  
+}
+
+.services {
+  padding: 40px 0;
+  overflow: hidden;
+}

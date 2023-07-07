@@ -4,6 +4,7 @@ import AOS from "aos";
 import "aos/dist/aos.css";
 import { useEffect } from "react";
 import { BiBriefcase, BiBook, BiGlobe } from "react-icons/bi";
+
 export default function Services() {
   useEffect(() => {
     AOS.init({
@@ -12,15 +13,17 @@ export default function Services() {
       delay: 0,
     });
   }, []);
+
   return (
     <>
       <section id="services" className="services">
-        <div className="container">
+        <div>
           <div
             className="section-title aos-init aos-animate"
             data-aos="zoom-out"
           >
             <h2>Services</h2>
+
             <p>What we do offer</p>
           </div>
 
@@ -31,7 +34,7 @@ export default function Services() {
                 data-aos="zoom-in-left"
               >
                 <div className="icon">
-                  <BiBook color="#ff689b" />
+                  <i class="bi bi-briefcase briefcase"></i>
                 </div>
                 <h4 className="title">
                   <a>Lorem Ipsum</a>

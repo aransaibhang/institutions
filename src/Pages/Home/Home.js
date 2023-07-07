@@ -6,8 +6,9 @@ import Team from '../../Components/Ui/Team'
 export default function Home() {
   return (
     <div><Carousel/>
-    <Services/>
+<div className='container' style={{paddingLeft:"7rem",paddingRight:"7rem"}}><Services/>
     <Testimonials/>
     <Team/></div>
+    </div>
   )
 }

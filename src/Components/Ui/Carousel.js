@@ -5,7 +5,7 @@ import "../Styles/Carousel.css";
 
 export default function Carousel() {
   return (
-    <div id="carouselExample" className="carousel slide vw-100">
+    <div id="carouselExample" className="carousel slide ">
       <div className="carousel-inner gradient-bg">
         <div className="carousel-item active">
           <div className="position-relative">

@@ -7,7 +7,7 @@ import Footer from '../../Components/Ui/Footer'
 export default function Home() {
   return (
     <div><Carousel/>
-<div className='container' style={{paddingLeft:"7rem",paddingRight:"7rem"}}><Services/>
+<div className='container' ><Services/>
     <Testimonials/>
     <Team/>
     <Footer/></div>

@@ -9,15 +9,21 @@ export default function Team() {
   return (
     <div className="container">
       <div className="section-title aos-init aos-animate " data-aos="zoom-out">
-        <h2>Team</h2>
+        <div className="d-flex align-items-center">
+          <h2>Team</h2>
+          <div
+            className="bg-danger col-md-6 col-sm-12 mx-2"
+            style={{ height: "1px", width: "120px" }}
+          ></div>
+        </div>
         <p>Our Hardworking Team</p>
       </div>
 
       <div className="row">
         <div className="col-lg-3 col-md-6 d-flex align-items-stretch ">
-          <div className="member aos-init aos-animate team" data-aos="fade-up">
-            <div className="member-img">
-              <img src={Team1} className="img-fluid" alt="" />
+          <div className="member aos-init aos-animate team rounded-3" data-aos="fade-up">
+            <div className="member-img ">
+              <img src={Team1} className="img-fluid " alt="" />
               <div className="social">
                 <a>
                   <i className="bi bi-twitter"></i>

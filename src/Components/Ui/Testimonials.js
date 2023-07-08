@@ -11,7 +11,13 @@ export default function Testimonials() {
     <section id="testimonials" className="testimonials">
       <div className="container">
         <div className="section-title aos-init aos-animate" data-aos="zoom-out">
+        <div className="d-flex align-items-center">
           <h2>Testimonials</h2>
+          <div
+            className="bg-danger col-md-6 col-sm-12 mx-2"
+            style={{ height: "1px", width: "120px" }}
+          ></div>
+        </div>
           <p>What they are saying about us</p>
         </div>
         <div

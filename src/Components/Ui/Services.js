@@ -16,13 +16,19 @@ export default function Services() {
 
   return (
     <>
-      <section id="services" className="services">
+      <section id="services" className="services px-3">
         <div>
           <div
             className="section-title aos-init aos-animate"
             data-aos="zoom-out"
           >
-            <h2>Services</h2>
+            <div className="d-flex align-items-center">
+              <h2>Services</h2>
+              <div
+                className="bg-danger col-md-6 col-sm-12 mx-2"
+                style={{ height: "1px", width: "120px" }}
+              ></div>
+            </div>
 
             <p>What we do offer</p>
           </div>
@@ -30,7 +36,7 @@ export default function Services() {
           <div className="row">
             <div className="col-lg-4 col-md-6 ">
               <div
-                className="icon-box aos-init aos-animate card"
+                className="icon-box aos-init aos-animate card-service"
                 data-aos="zoom-in-left"
               >
                 <div className="icon">
@@ -48,7 +54,7 @@ export default function Services() {
 
             <div className="col-lg-4 col-md-6 mt-5 mt-md-0">
               <div
-                className="icon-box aos-init aos-animate card"
+                className="icon-box aos-init aos-animate card-service"
                 data-aos="zoom-in-left"
                 data-aos-delay="100"
               >
@@ -67,7 +73,7 @@ export default function Services() {
 
             <div className="col-lg-4 col-md-6 mt-5 mt-lg-0">
               <div
-                className="icon-box aos-init aos-animate card"
+                className="icon-box aos-init aos-animate card-service"
                 data-aos="zoom-in-left"
                 data-aos-delay="200"
               >
@@ -86,7 +92,7 @@ export default function Services() {
 
             <div className="col-lg-4 col-md-6 mt-5">
               <div
-                className="icon-box aos-init aos-animate card"
+                className="icon-box aos-init aos-animate card-service"
                 data-aos="zoom-in-left"
                 data-aos-delay="300"
               >
@@ -104,7 +110,7 @@ export default function Services() {
             </div>
             <div className="col-lg-4 col-md-6 mt-5">
               <div
-                className="icon-box aos-init aos-animate card"
+                className="icon-box aos-init aos-animate card-service"
                 data-aos="zoom-in-left"
                 data-aos-delay="400"
               >
@@ -123,7 +129,7 @@ export default function Services() {
 
             <div className="col-lg-4 col-md-6 mt-5">
               <div
-                className="icon-box aos-init aos-animate card"
+                className="icon-box aos-init aos-animate card-service"
                 data-aos="zoom-in-left"
                 data-aos-delay="500"
               >

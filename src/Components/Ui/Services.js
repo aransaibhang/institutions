@@ -3,7 +3,7 @@ import "../Styles/Services.css";
 import AOS from "aos";
 import "aos/dist/aos.css";
 import { useEffect } from "react";
-import { BiBriefcase, BiBook, BiGlobe } from "react-icons/bi";
+
 
 export default function Services() {
   useEffect(() => {
@@ -43,7 +43,7 @@ export default function Services() {
                   <i class="bi bi-briefcase briefcase"></i>
                 </div>
                 <h4 className="title">
-                  <a>Lorem Ipsum</a>
+                  <a href="www.google.com" style={{color: "black", textdecoration: 'none'}}>Lorem Ipsum</a>
                 </h4>
                 <p className="description">
                   Voluptatum deleniti atque corrupti quos dolores et quas
@@ -59,10 +59,10 @@ export default function Services() {
                 data-aos-delay="100"
               >
                 <div className="icon">
-                  <BiBook color="#e9bf06" />
+                <i class="bi bi-book" style={{color: "#e9bf06"}}></i>
                 </div>
                 <h4 className="title">
-                  <a>Dolor Sitema</a>
+                  <a href="www.google.com" style={{color: "black", textdecoration: 'none'}}>Dolor Sitema</a>
                 </h4>
                 <p className="description">
                   Minim veniam, quis nostrud exercitation ullamco laboris nisi
@@ -78,10 +78,10 @@ export default function Services() {
                 data-aos-delay="200"
               >
                 <div className="icon">
-                  <BiBook color="#3fcdc7" />
+                <i class="bi bi-card-checklist" style={{color: "#3fcdc7"}}></i>
                 </div>
                 <h4 className="title">
-                  <a>Sed ut perspiciatis</a>
+                  <a href="www.google.com" style={{color: "black", textdecoration: 'none'}}>Sed ut perspiciatis</a>
                 </h4>
                 <p className="description">
                   Duis aute irure dolor in reprehenderit in voluptate velit esse
@@ -97,10 +97,10 @@ export default function Services() {
                 data-aos-delay="300"
               >
                 <div className="icon">
-                  <BiBook color="#41cf2e" />
+                <i class="bi bi-binoculars" style={{color:"#41cf2e"}}></i>
                 </div>
                 <h4 className="title">
-                  <a>Magni Dolores</a>
+                  <a href="www.google.com" style={{color: "black", textdecoration: 'none'}}>Magni Dolores</a>
                 </h4>
                 <p className="description">
                   Excepteur sint occaecat cupidatat non proident, sunt in culpa
@@ -115,10 +115,10 @@ export default function Services() {
                 data-aos-delay="400"
               >
                 <div className="icon">
-                  <BiBook color="#d6ff22" />
+                <i class="bi bi-globe" style={{color: "#d6ff22"}}></i>
                 </div>
                 <h4 className="title">
-                  <a>Nemo Enim</a>
+                  <a href="www.google.com" style={{color: "black", textdecoration: 'none'}}>Nemo Enim</a>
                 </h4>
                 <p className="description">
                   At vero eos et accusamus et iusto odio dignissimos ducimus qui
@@ -134,10 +134,10 @@ export default function Services() {
                 data-aos-delay="500"
               >
                 <div className="icon">
-                  <BiBook color="#4680ff" />
+                <i class="bi bi-clock" style={{color: "#4680ff"}}></i>
                 </div>
                 <h4 className="title">
-                  <a>Eiusmod Tempor</a>
+                  <a href="www.google.com" style={{color: "black", textdecoration: 'none'}}>Eiusmod Tempor</a>
                 </h4>
                 <p className="description">
                   Et harum quidem rerum facilis est et expedita distinctio. Nam

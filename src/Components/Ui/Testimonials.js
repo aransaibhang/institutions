@@ -1,4 +1,4 @@
-import React from "react";
+import React, { useState, useEffect } from "react";
 import "../Styles/Testimonials.css";
 import Testimonial1 from "../Icons/testimonials-1.jpg";
 import Testimonial2 from "../Icons/testimonials-2.jpg";
@@ -7,303 +7,115 @@ import Testimonial4 from "../Icons/testimonials-4.jpg";
 import Testimonial5 from "../Icons/testimonials-5.jpg";
 
 export default function Testimonials() {
+  const testimonialData = [
+    {
+      name: "Saul Goodman",
+      image: Testimonial1,
+      designation: "Ceo & Founder",
+      description: "Export tempor illum tamen malis malis eram quae irure esse labore quem cillum quid cillum eram malis quorum velit fore eram velit sunt aliqua noster fugiat irure amet legam anim culpa.",
+    },
+    {
+      name: "Sara Wilsion",
+      image: Testimonial2,
+      designation: "Operator",
+      description: "Quis quorum aliqua sint quem legam fore sunt eram irure aliqua veniam tempor noster veniam enim culpa labore duis sunt culpa nulla illum cillum fugiat legam esse veniam culpa fore nisi cillum quid.",
+    },
+    {
+      name: "Jena Karlis",
+      image: Testimonial3,
+      designation: "Designer",
+      description: "Quis quorum aliqua sint quem legam fore sunt eram irure aliqua veniam tempor noster veniam enim culpa labore duis sunt culpa nulla illum cillum fugiat legam esse veniam culpa fore nisi cillum quid.",
+    },
+    {
+      name: "Sara Wilsion",
+      image: Testimonial4,
+      designation: "Ceo & Founder",
+      description: "Export tempor illum tamen malis malis eram quae irure esse labore quem cillum quid cillum eram malis quorum velit fore eram velit sunt aliqua noster fugiat irure amet legam anim culpa.",
+    },
+    {
+      name: "Jena Karlis",
+      image: Testimonial5,
+      designation: "Operator",
+      description: "Quis quorum aliqua sint quem legam fore sunt eram irure aliqua veniam tempor noster veniam enim culpa labore duis sunt culpa nulla illum cillum fugiat legam esse veniam culpa fore nisi cillum quid.",
+    },
+  ];
+
+  const [startIndex, setStartIndex] = useState(0);
+  const endIndex = startIndex + 2;
+
+  useEffect(() => {
+    if (testimonialData.length > 4) {
+      const interval = setInterval(() => {
+        if (endIndex < testimonialData.length) {
+          setStartIndex(startIndex + 1);
+        } else {
+          setStartIndex(0);
+        }
+      }, 3000);
+
+      return () => clearInterval(interval);
+    }
+    // eslint-disable-next-line
+  }, [startIndex]);
+
+  useEffect(() => {
+    if (startIndex > testimonialData.length - 3) {
+      setStartIndex(0);
+    }
+  }, [startIndex, testimonialData.length]);
+
   return (
     <section id="testimonials" className="testimonials">
       <div className="container">
         <div className="section-title aos-init aos-animate" data-aos="zoom-out">
-        <div className="d-flex align-items-center">
-          <h2>Testimonials</h2>
-          <div
-            className="bg-danger col-md-6 col-sm-12 mx-2"
-            style={{ height: "1px", width: "120px" }}
-          ></div>
-        </div>
+          <div className="d-flex align-items-center">
+            <h2>Testimonials</h2>
+            <div
+              className="bg-danger col-md-6 col-sm-12 mx-2"
+              style={{ height: "1px", width: "120px" }}
+            ></div>
+          </div>
           <p>What they are saying about us</p>
         </div>
-        <div
-          className="testimonials-slider swiper swiper-initialized swiper-horizontal swiper-pointer-events aos-init aos-animate"
-          data-aos="fade-up"
-          data-aos-delay="100"
-        >
-          <div
-            className="swiper-wrapper"
-            id="swiper-wrapper-672e81010d549842fe"
-            aria-live="off"
-            style={{
-              transform: "translate3d(-3070.67px, 0px, 0px)",
-              transitionDuration: "0ms",
-            }}
-          >
-            <div
-              className="swiper-slide swiper-slide-duplicate"
-              data-swiper-slide-index="2"
-              role="group"
-              aria-label="3 / 5"
-              style={{ width: "378.667px", marginRight: "20px" }}
-            >
-              <div className="testimonial-item">
-                <p>
-                  <i className="bx bxs-quote-alt-left quote-icon-left"></i>
-                  "Enim nisi quem export duis labore cillum quae magna enim sint
-                  quorum nulla quem veniam duis minim tempor labore quem eram
-                  duis noster aute amet eram fore quis sint minim."
-                  <i className="bx bxs-quote-alt-right quote-icon-right"></i>
-                </p>
-                <img src={Testimonial1} className="testimonial-img" alt="" />
-                <h3>Jena Karlis</h3>
-                <h4>Store Owner</h4>
-              </div>
-            </div>
-            <div
-              className="swiper-slide swiper-slide-duplicate swiper-slide-duplicate-prev"
-              data-swiper-slide-index="3"
-              role="group"
-              aria-label="4 / 5"
-              style={{ width: "378.667px", marginRight: "20px" }}
-            >
-              <div className="testimonial-item">
-                <p>
-                  <i className="bx bxs-quote-alt-left quote-icon-left"></i>
-                  Fugiat enim eram quae cillum dolore dolor amet nulla culpa
-                  multos export minim fugiat minim velit minim dolor enim duis
-                  veniam ipsum anim magna sunt elit fore quem dolore labore
-                  illum veniam."
-                  <i className="bx bxs-quote-alt-right quote-icon-right"></i>
-                </p>
-                <img src={Testimonial2} className="testimonial-img" alt="" />
-                <h3>Matt Brandon</h3>
-                <h4>Freelancer</h4>
-              </div>
-            </div>
-            <div
-              className="swiper-slide swiper-slide-duplicate swiper-slide-duplicate-active"
-              data-swiper-slide-index="4"
-              role="group"
-              aria-label="5 / 5"
-              style={{ width: "378.667px", marginRight: "20px" }}
-            >
-              <div className="testimonial-item">
-                <p>
-                  <i className="bx bxs-quote-alt-left quote-icon-left"></i>
-                  Quis quorum aliqua sint quem legam fore sunt eram irure aliqua
-                  veniam tempor noster veniam enim culpa labore duis sunt culpa
-                  nulla illum cillum fugiat legam esse veniam culpa fore nisi
-                  cillum quid.
-                  <i className="bx bxs-quote-alt-right quote-icon-right"></i>
-                </p>
-                <img src={Testimonial3} className="testimonial-img" alt="" />
-                <h3>John Larson</h3>
-                <h4>Entrepreneur</h4>
-              </div>
-            </div>
 
-            <div
-              className="swiper-slide swiper-slide-duplicate-next"
-              data-swiper-slide-index="0"
-              role="group"
-              aria-label="1 / 5"
-              style={{ width: "378.667px", marginRight: "20px" }}
-            >
-              <div className="testimonial-item">
-                <p>
-                  <i className="bx bxs-quote-alt-left quote-icon-left"></i>
-                 " Proin iaculis purus consequat sem cure digni ssim donec
-                  porttitora entum suscipit rhoncus. Accusantium quam, ultricies
-                  eget id, aliquam eget nibh et. Maecen aliquam, risus at
-                  semper."
-                  <i className="bx bxs-quote-alt-right quote-icon-right"></i>
-                </p>
-                <img src={Testimonial4} className="testimonial-img" alt="" />
-                <h3>Saul Goodman</h3>
-                <h4>Ceo &amp; Founder</h4>
+        <div className="row">
+          {testimonialData.slice(startIndex, endIndex + 1).map((td, index) => {
+            return (
+              <div className="col-4" key={index}>
+                <div className="border rounded-1 shadow-sm p-4 text-center" style={{width:"25rem",height:"23rem"}}>
+                  <div>
+                    <p >
+                      <i className="bx bxs-quote-alt-left quote-icon-left"  ></i>
+                      {td.description}
+                      <i className="bx bxs-quote-alt-right quote-icon-right"></i>
+                    </p>
+                  </div>
+                  <div>
+                    <img
+                      src={td.image}
+                      alt={td.image}
+                      className="rounded-circle"
+                      style={{ width: "90px", marginTop :"1.2rem",marginBottom:"0.3rem"}}
+                    />
+                  </div>
+                  <div className="h3">{td.name}</div>
+                  <div className="h4">{td.designation}</div>
+                </div>
               </div>
-            </div>
+            );
+          })}
+        </div>
 
+        <div className="d-flex justify-content-center align-items-center my-3">
+          {testimonialData.map((_, index) => (
             <div
-              className="swiper-slide"
-              data-swiper-slide-index="1"
-              role="group"
-              aria-label="2 / 5"
-              style={{ width: "378.667px", marginRight: "20px" }}
-            >
-              <div className="testimonial-item">
-                <p>
-                  <i className="bx bxs-quote-alt-left quote-icon-left"></i>
-                  Export tempor illum tamen malis malis eram quae irure esse
-                  labore quem cillum quid cillum eram malis quorum velit fore
-                  eram velit sunt aliqua noster fugiat irure amet legam anim
-                  culpa.
-                  <i className="bx bxs-quote-alt-right quote-icon-right"></i>
-                </p>
-                <img src={Testimonial5} className="testimonial-img" alt="" />
-                <h3>Sara Wilsson</h3>
-                <h4>Designer</h4>
-              </div>
-            </div>
-
-            <div
-              className="swiper-slide"
-              data-swiper-slide-index="2"
-              role="group"
-              aria-label="3 / 5"
-              style={{ width: "378.667px", marginRight: "20px" }}
-            >
-              <div className="testimonial-item">
-                <p>
-                  <i className="bx bxs-quote-alt-left quote-icon-left"></i>
-                  Enim nisi quem export duis labore cillum quae magna enim sint
-                  quorum nulla quem veniam duis minim tempor labore quem eram
-                  duis noster aute amet eram fore quis sint minim.
-                  <i className="bx bxs-quote-alt-right quote-icon-right"></i>
-                </p>
-                <img src={Testimonial3} className="testimonial-img" alt="" />
-                <h3>Jena Karlis</h3>
-                <h4>Store Owner</h4>
-              </div>
-            </div>
-
-            <div
-              className="swiper-slide swiper-slide-prev"
-              data-swiper-slide-index="3"
-              role="group"
-              aria-label="4 / 5"
-              style={{ width: "378.667px", marginRight: "20px" }}
-            >
-              <div className="testimonial-item">
-                <p>
-                  <i className="bx bxs-quote-alt-left quote-icon-left"></i>
-                  Fugiat enim eram quae cillum dolore dolor amet nulla culpa
-                  multos export minim fugiat minim velit minim dolor enim duis
-                  veniam ipsum anim magna sunt elit fore quem dolore labore
-                  illum veniam.
-                  <i className="bx bxs-quote-alt-right quote-icon-right"></i>
-                </p>
-                <img src={Testimonial4} className="testimonial-img" alt="" />
-                <h3>Matt Brandon</h3>
-                <h4>Freelancer</h4>
-              </div>
-            </div>
-
-            <div
-              className="swiper-slide swiper-slide-active"
-              data-swiper-slide-index="4"
-              role="group"
-              aria-label="5 / 5"
-              style={{ width: "378.667px", marginRight: "20px" }}
-            >
-              <div className="testimonial-item">
-                <p>
-                  <i className="bx bxs-quote-alt-left quote-icon-left"></i>
-                  Quis quorum aliqua sint quem legam fore sunt eram irure aliqua
-                  veniam tempor noster veniam enim culpa labore duis sunt culpa
-                  nulla illum cillum fugiat legam esse veniam culpa fore nisi
-                  cillum quid.
-                  <i className="bx bxs-quote-alt-right quote-icon-right"></i>
-                </p>
-                <img src={Testimonial5} className="testimonial-img" alt="" />
-                <h3>John Larson</h3>
-                <h4>Entrepreneur</h4>
-              </div>
-            </div>
-
-            <div
-              className="swiper-slide swiper-slide-duplicate swiper-slide-next"
-              data-swiper-slide-index="0"
-              role="group"
-              aria-label="1 / 5"
-              style={{ width: "378.667px", marginRight: "20px" }}
-            >
-              <div className="testimonial-item">
-                <p>
-                  <i className="bx bxs-quote-alt-left quote-icon-left"></i>
-                  Proin iaculis purus consequat sem cure digni ssim donec
-                  porttitora entum suscipit rhoncus. Accusantium quam, ultricies
-                  eget id, aliquam eget nibh et. Maecen aliquam, risus at
-                  semper.
-                  <i className="bx bxs-quote-alt-right quote-icon-right"></i>
-                </p>
-                <img src={Testimonial1} className="testimonial-img" alt="" />
-                <h3>Saul Goodman</h3>
-                <h4>Ceo &amp; Founder</h4>
-              </div>
-            </div>
-            <div
-              className="swiper-slide swiper-slide-duplicate"
-              data-swiper-slide-index="1"
-              role="group"
-              aria-label="2 / 5"
-              style={{ width: "378.667px", marginRight: "20px" }}
-            >
-              <div className="testimonial-item">
-                <p>
-                  <i className="bx bxs-quote-alt-left quote-icon-left"></i>
-                  Export tempor illum tamen malis malis eram quae irure esse
-                  labore quem cillum quid cillum eram malis quorum velit fore
-                  eram velit sunt aliqua noster fugiat irure amet legam anim
-                  culpa.
-                  <i className="bx bxs-quote-alt-right quote-icon-right"></i>
-                </p>
-                <img src={Testimonial2} className="testimonial-img" alt="" />
-                <h3>Sara Wilsson</h3>
-                <h4>Designer</h4>
-              </div>
-            </div>
-            <div
-              className="swiper-slide swiper-slide-duplicate"
-              data-swiper-slide-index="2"
-              role="group"
-              aria-label="3 / 5"
-              style={{ width: "378.667px", marginRight: "20px" }}
-            >
-              <div className="testimonial-item">
-                <p>
-                  <i className="bx bxs-quote-alt-left quote-icon-left"></i>
-                  Enim nisi quem export duis labore cillum quae magna enim sint
-                  quorum nulla quem veniam duis minim tempor labore quem eram
-                  duis noster aute amet eram fore quis sint minim.
-                  <i className="bx bxs-quote-alt-right quote-icon-right"></i>
-                </p>
-                <img src={Testimonial3} className="testimonial-img" alt="" />
-                <h3>Jena Karlis</h3>
-                <h4>Store Owner</h4>
-              </div>
-            </div>
-            <div className="swiper-pagination swiper-pagination-clickable swiper-pagination-bullets swiper-pagination-horizontal">
-              <span
-                className="swiper-pagination-bullet"
-                tabIndex={0}
-                role="button"
-                aria-label="Go to slide 1"
-              ></span>
-              <span
-                className="swiper-pagination-bullet swiper-pagination-bullet-active"
-                tabIndex={0}
-                role="button"
-                aria-label="Go to slide 2"
-                aria-current="true"
-              ></span>
-              <span
-                className="swiper-pagination-bullet"
-                tabIndex={0}
-                role="button"
-                aria-label="Go to slide 3"
-              ></span>
-              <span
-                className="swiper-pagination-bullet"
-                tabIndex={0}
-                role="button"
-                aria-label="Go to slide 4"
-              ></span>
-              <span
-                className="swiper-pagination-bullet"
-                tabIndex={0}
-                role="button"
-                aria-label="Go to slide 5"
-              ></span>
-            </div>
-            <span className="swiper-notification" aria-live="assertive" aria-atomic="true"></span>
-
-          </div>
+              key={index}
+              className={`border border-dark ${
+                index === startIndex  ? "bg-dark" : ""
+              } p-1 rounded-circle me-1`}
+              style={{ width: "4px" }}
+            ></div>
+          ))}
         </div>
       </div>
     </section>

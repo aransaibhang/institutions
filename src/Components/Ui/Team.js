@@ -19,7 +19,7 @@ export default function Team() {
         <p>Our Hardworking Team</p>
       </div>
 
-      <div className="row">
+      <div className="row text-center">
         <div className="col-lg-3 col-md-6 d-flex align-items-stretch ">
           <div className="member aos-init aos-animate team rounded-3" data-aos="fade-up">
             <div className="member-img ">

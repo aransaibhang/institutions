@@ -19,20 +19,19 @@
 }
 .text-overlay {
   position: absolute;
-
   align-items: left;
-
+  margin-top: 0px;
   z-index: 1;
 
-  top: 23%;
-  left: 70%;
+  top: 25%;
+  left: 50%;
   transform: translate(-50%, -50%);
   color: white;
   text-align: center;
   opacity: 0;
   font-size: 3rem; /* Set the initial font size to a larger value */
   animation-name: fadeInAndShrink;
-  animation-duration: 1s;
+  animation-duration: 2s;
   animation-timing-function: ease-in-out;
   animation-fill-mode: forwards;
 }
@@ -55,6 +54,67 @@
   right: 0;
   bottom: 0;
   left: 0;
-  background: linear-gradient(to right, transparent, rgb(73, 80, 84));
+  background-image: linear-gradient(to top, rgba(0, 0, 0, 0.8), transparent);
   z-index: 1;
+}
+.desc{
+  position: absolute;
+  align-items: left;
+  margin-top: 0px;
+  z-index: 1;
+  top:43%;
+  left: 49%;
+  right: 10%;
+  transform: translate(-50%, -50%);
+  color: white;
+  text-align: center;
+  opacity: 0;
+  font-size: 1.2rem !important; /* Set the initial font size to a larger value */
+  animation-name: fadeInAndShrink;
+  animation-duration: 2s;
+  animation-timing-function: ease-in-out;
+  animation-fill-mode: forwards;
+}
+/* Center the button */
+.splash__content > :last-child {
+  margin-bottom: 0;
+}
+.splash .button__link {
+  color: #ffffff;
+}
+.button__link {
+  position: absolute;
+  align-items: left;
+  margin-top: 0px;
+  z-index: 1;
+  top:60%;
+  left: 45%;
+ font-size: 20px;
+  text-transform: uppercase;
+  font-family: "futura-pt-bold", sans-serif;
+  font-weight: normal;
+  border-bottom: 2px solid #e36f1e;
+  color: #fff;
+  text-decoration: none;
+  background-size: 100% 200%;
+  background-image: linear-gradient(to bottom, transparent 50%, #e36f1e 50%);
+  transition: background-position 500ms, color 300ms;
+  padding: 0.25rem 0.5rem 0 0.5rem;
+}
+.container--blue-dark .button__link {
+  color: #ffffff;
+}
+.button__link:hover {
+  color: #fff;
+  background-position: 0 100%;
+}
+.button__link + .button__link {
+  margin-left: 3rem;
+}
+.button__link--blue {
+  background-image: linear-gradient(to bottom, transparent 50%, #004c97 50%);
+  border-bottom: 0.2rem solid #004c97;
+}
+.button__link--blue:hover {
+  color: #ffffff;
 }

@@ -1,31 +1,27 @@
 import React from "react";
-import Bgimg from "../bgImages/college-g5a0824311_1280.jpg";
-import Bgimg1 from "../bgImages/yale-university-g91857e91f_1280.jpg";
+import Bgimg from "../bgImages/Wheaton-College-2022-Orientation-Committee.jpg";
+import Bgimg1 from "../bgImages/Wheaton-Students-Walking-on-Campus-In-Fall.jpg";
 import "../Styles/Carousel.css";
 
 export default function Carousel() {
   return (
+    
     <div id="carouselExample" className="carousel slide ">
       <div className="carousel-inner gradient-bg">
         <div className="carousel-item active">
           <div className="position-relative">
-            <img src={Bgimg1} className="d-block img-fluid" alt="..." />
+            <img src={Bgimg} className="d-block img-fluid" alt="..." />
             <div className="text-overlay">
-              Associate With Us
-              <div style={{ fontSize: "1.2rem", textAlign: "left" }}>
-                LOREM, IPSUM DOLOR SIT AMET CONSECTETUR
-              </div>
+            Asscociate with us              
             </div>
-            <button className="learn-more">
-              <span className="circle" aria-hidden="true">
-                <span className="icon arrow"></span>
-              </span>
-              <span className="button-text">Learn More</span>
-            </button>
+            <div  className="desc" >
+            We want to establish a local presence for you and help students join your institute.</div>
           </div>
+          <a href="https://go.wheaton.edu/account/login?r=https%3a%2f%2fgo.wheaton.edu%2fportal%2fstatus" class="button__link" tabindex="0">Get Started </a>
+
         </div>
         <div className="carousel-item">
-          <img src={Bgimg} className="d-block img-fluid" alt="..." />
+          <img src={Bgimg1} className="d-block img-fluid" alt="..." />
         </div>
       </div>
       <button

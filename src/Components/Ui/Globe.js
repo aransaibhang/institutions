@@ -1,7 +1,8 @@
 import React, { useEffect, useRef } from "react";
 import planetaryjs from "planetary.js";
 import { feature } from "topojson";
-import "../Styles/Globe.css"
+import "../Styles/Globe.css";
+import globejson from "../globe.json";
 const RotatingGlobe = () => {
   const globeRef = useRef(null);
 
@@ -75,8 +76,6 @@ const RotatingGlobe = () => {
 
     globe.loadPlugin(planetaryjs.plugins.pings());
 
-    globe.loadPlugin(planetaryjs.plugins.zoom({ scaleExtent: [170, 450] }));
-
     globe.loadPlugin(
       planetaryjs.plugins.drag({
         onDragStart: function () {
@@ -88,7 +87,7 @@ const RotatingGlobe = () => {
       })
     );
 
-    globe.projection.scale(275).translate([450, 450]).rotate([0, -10, 0]);
+    globe.projection.scale(300).translate([450, 450]).rotate([0, -10, 0]);
 
     setInterval(function () {
       const lat = Math.random() * 170 - 85;

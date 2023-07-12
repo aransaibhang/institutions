@@ -1,43 +1,185 @@
 import React from "react";
 import RotatingGlobe from "./Globe.js";
+import AOS from "aos";
+import "aos/dist/aos.css";
+import { useEffect } from "react";
+import "../Styles/Info.css";
 export default function Info() {
+  useEffect(() => {
+    AOS.init({
+      duration: 1000,
+      easing: "ease-in-out",
+      delay: 0,
+    });
+  }, []);
   return (
     <div className="mx-4">
-    <div className="row">
-      <div className="d-flex justify-content-between" >
-        <div
-          className="col-8 rounded-1 p-1 text-center"
-          style={{ height: "60rem" }}
-        >
-          <RotatingGlobe />
-          <h1 className="text-center mt-3 hover-effect"><span>Connecting partners and institutions</span><br/> from across the globe</h1>
-         
+      <div className="section-title aos-init aos-animate" data-aos="zoom-out">
+        <div className="d-flex align-items-center mt-5">
+          <h2>Globe</h2>
+          <div
+            className="bg-danger col-md-6 col-sm-12 mx-2"
+            style={{ height: "1px", width: "120px" }}
+          ></div>
         </div>
-        <div
-          className="col-3 border rounded-1 shadow-sm p-1 text-center"
-          style={{ height: "6rem" }}
-        >
 
-              <div
-                className="icon-box aos-init aos-animate "
-                data-aos="zoom-in-left"
-                data-aos-delay="200"
+        <p className="mt-2">
+          Connecting partners and institutions from across the globe
+        </p>
+      </div>
+      <div className="row">
+        <div className="d-flex justify-content-between">
+          <div
+            className="col-8 rounded-1 p-1 text-center"
+            style={{ height: "60rem", marginTop: "-150px" }}
+          >
+            <RotatingGlobe />
+          </div>
+          <div className="col-3   p-1 text-center" style={{ height: "6rem" }}>
+            <div
+              className="icon-box aos-init aos-animate "
+              data-aos="zoom-in-left"
+              data-aos-delay="100"
+            >
+              <h4 className="data mb-3">
+                <a
+                  href="www.google.com"
+                  style={{
+                    color: "black",
+                    textdecoration: "none",
+                    fontSize: "40px",
+                  }}
+                >
+                  1000+
+                </a>
+              </h4>
+              <p
+                style={{
+                  color: "black",
+                  textdecoration: "none",
+                  fontSize: "25px",
+                }}
               >
-                <div className="icon">
-                <i class="bi bi-card-checklist" style={{color: "#3fcdc7"}}></i>
-                </div>
-                <h4 className="title">
-                  <a href="www.google.com" style={{color: "black", textdecoration: 'none'}}>1000+</a>
-                </h4>
-                <p className="description">
-                  Duis aute irure dolor in reprehenderit in voluptate velit esse
-                  cillum dolore eu fugiat nulla pariatur
-                </p>
-              </div>
+                Students
+              </p>
+            </div>
+            <div
+              className="icon-box aos-init aos-animate "
+              data-aos="zoom-in-left"
+              data-aos-delay="300"
+            >
+              <h4 className="data mb-3">
+                <a
+                  href="www.google.com"
+                  style={{
+                    color: "black",
+                    textdecoration: "none",
+                    fontSize: "40px",
+                  }}
+                >
+                  1000+
+                </a>
+              </h4>
+              <p
+                className=""
+                style={{
+                  color: "black",
+                  textdecoration: "none",
+                  fontSize: "25px",
+                }}
+              >
+                Students
+              </p>
+            </div>
+
+            <div
+              className="icon-box aos-init aos-animate "
+              data-aos="zoom-in-left"
+              data-aos-delay="500"
+            >
+              <h4 className="data mb-3">
+                <a
+                  href="www.google.com"
+                  style={{
+                    color: "black",
+                    textdecoration: "none",
+                    fontSize: "40px",
+                  }}
+                >
+                  1000+
+                </a>
+              </h4>
+              <p
+                className=""
+                style={{
+                  color: "black",
+                  textdecoration: "none",
+                  fontSize: "25px",
+                }}
+              >
+                Students
+              </p>
+            </div>
+            <div
+              className="icon-box aos-init aos-animate "
+              data-aos="zoom-in-left"
+              data-aos-delay="600"
+            >
+              <h4 className="data mb-3">
+                <a
+                  href="www.google.com"
+                  style={{
+                    color: "black",
+                    textdecoration: "none",
+                    fontSize: "40px",
+                  }}
+                >
+                  1000+
+                </a>
+              </h4>
+              <p
+                className=""
+                style={{
+                  color: "black",
+                  textdecoration: "none",
+                  fontSize: "25px",
+                }}
+              >
+                Students
+              </p>
+            </div>
+            <div
+              className="icon-box aos-init aos-animate "
+              data-aos="zoom-in-left"
+              data-aos-delay="800"
+            >
+              <h4 className="data mb-3">
+                <a
+                  href="www.google.com"
+                  style={{
+                    color: "black",
+                    textdecoration: "none",
+                    fontSize: "40px",
+                  }}
+                >
+                  1000+
+                </a>
+              </h4>
+              <p
+                className=""
+                style={{
+                  color: "black",
+                  textdecoration: "none",
+                  fontSize: "25px",
+                }}
+              >
+                Students
+              </p>
+            </div>
+          </div>
         </div>
       </div>
     </div>
-  </div>
   );
 }
 {

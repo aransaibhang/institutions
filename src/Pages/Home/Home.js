@@ -3,6 +3,7 @@ import Carousel from "../../Components/Ui/Carousel";
 import Services from "../../Components/Ui/Services";
 import Testimonials from "../../Components/Ui/Testimonials";
 import Team from "../../Components/Ui/Team";
+import Work from "../../Components/Ui/Work";
 import Footer from "../../Components/Ui/Footer";
 import Info from "../../Components/Ui/Info";
 export default function Home() {
@@ -22,7 +23,7 @@ export default function Home() {
           <Testimonials />
         </div>
         <div style={{ marginBottom: "110px" }}>
-          <Team />
+          <Work />
         </div>
         <Footer />
       </div>

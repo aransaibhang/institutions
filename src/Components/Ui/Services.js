@@ -1,8 +1,51 @@
-import React from "react";
+import React, { useEffect } from "react";
 import "../Styles/Services.css";
 import AOS from "aos";
 import "aos/dist/aos.css";
-import { useEffect } from "react";
+
+const servicesData = [
+  {
+    icon: "bi bi-briefcase briefcase",
+    title: "Lorem Ipsum",
+    description:
+      "Voluptatum deleniti atque corrupti quos dolores et quas molestias excepturi sint occaecati cupiditate non provident",
+  },
+  {
+    icon: "bi bi-book",
+    title: "Dolor Sitema",
+    description:
+      "Minim veniam, quis nostrud exercitation ullamco laboris nisi ut aliquip ex ea commodo consequat tarad limino ata",
+    iconColor: "#e9bf06",
+  },
+  {
+    icon: "bi bi-card-checklist",
+    title: "Sed ut perspiciatis",
+    description:
+      "Duis aute irure dolor in reprehenderit in voluptate velit esse cillum dolore eu fugiat nulla pariatur",
+    iconColor: "#3fcdc7",
+  },
+  {
+    icon: "bi bi-binoculars",
+    title: "Magni Dolores",
+    description:
+      "Excepteur sint occaecat cupidatat non proident, sunt in culpa qui officia deserunt mollit anim id est laborum",
+    iconColor: "#41cf2e",
+  },
+  {
+    icon: "bi bi-globe",
+    title: "Nemo Enim",
+    description:
+      "At vero eos et accusamus et iusto odio dignissimos ducimus qui blanditiis praesentium voluptatum deleniti atque",
+    iconColor: "#d6ff22",
+  },
+  {
+    icon: "bi bi-clock",
+    title: "Eiusmod Tempor",
+    description:
+      "Et harum quidem rerum facilis est et expedita distinctio. Nam libero tempore, cum soluta nobis est eligendi",
+    iconColor: "#4680ff",
+  },
+];
 
 export default function Services() {
   useEffect(() => {
@@ -33,150 +76,32 @@ export default function Services() {
           </div>
 
           <div className="row">
-            <div className="col-lg-4 col-md-6 ">
+            {servicesData.map((service, index) => (
               <div
-                className="icon-box aos-init aos-animate card-service"
-                data-aos="zoom-in-left"
+                className="col-lg-4 col-md-6"
+                key={index}
+                style={{marginBottom:"3rem"}}
               >
-                <div className="icon">
-                  <i class="bi bi-briefcase briefcase"></i>
+                <div
+                  className="icon-box aos-init aos-animate card-service"
+                  data-aos="zoom-in-left"
+                  data-aos-delay={index * 100}
+                >
+                  <div className="icon">
+                    <i className={service.icon} style={{ color: service.iconColor }}></i>
+                  </div>
+                  <h4 className="title">
+                    <a
+                      href="www.google.com"
+                      style={{ color: "black", textDecoration: "none" }}
+                    >
+                      {service.title}
+                    </a>
+                  </h4>
+                  <p className="description">{service.description}</p>
                 </div>
-                <h4 className="title">
-                  <a
-                    href="www.google.com"
-                    style={{ color: "black", textdecoration: "none" }}
-                  >
-                    Lorem Ipsum
-                  </a>
-                </h4>
-                <p className="description">
-                  Voluptatum deleniti atque corrupti quos dolores et quas
-                  molestias excepturi sint occaecati cupiditate non provident
-                </p>
               </div>
-            </div>
-
-            <div className="col-lg-4 col-md-6 mt-5 mt-md-0">
-              <div
-                className="icon-box aos-init aos-animate card-service"
-                data-aos="zoom-in-left"
-                data-aos-delay="100"
-              >
-                <div className="icon">
-                  <i class="bi bi-book" style={{ color: "#e9bf06" }}></i>
-                </div>
-                <h4 className="title">
-                  <a
-                    href="www.google.com"
-                    style={{ color: "black", textdecoration: "none" }}
-                  >
-                    Dolor Sitema
-                  </a>
-                </h4>
-                <p className="description">
-                  Minim veniam, quis nostrud exercitation ullamco laboris nisi
-                  ut aliquip ex ea commodo consequat tarad limino ata
-                </p>
-              </div>
-            </div>
-
-            <div className="col-lg-4 col-md-6 mt-5 mt-lg-0">
-              <div
-                className="icon-box aos-init aos-animate card-service"
-                data-aos="zoom-in-left"
-                data-aos-delay="200"
-              >
-                <div className="icon">
-                  <i
-                    class="bi bi-card-checklist"
-                    style={{ color: "#3fcdc7" }}
-                  ></i>
-                </div>
-                <h4 className="title">
-                  <a
-                    href="www.google.com"
-                    style={{ color: "black", textdecoration: "none" }}
-                  >
-                    Sed ut perspiciatis
-                  </a>
-                </h4>
-                <p className="description">
-                  Duis aute irure dolor in reprehenderit in voluptate velit esse
-                  cillum dolore eu fugiat nulla pariatur
-                </p>
-              </div>
-            </div>
-
-            <div className="col-lg-4 col-md-6 mt-5">
-              <div
-                className="icon-box aos-init aos-animate card-service"
-                data-aos="zoom-in-left"
-                data-aos-delay="300"
-              >
-                <div className="icon">
-                  <i class="bi bi-binoculars" style={{ color: "#41cf2e" }}></i>
-                </div>
-                <h4 className="title">
-                  <a
-                    href="www.google.com"
-                    style={{ color: "black", textdecoration: "none" }}
-                  >
-                    Magni Dolores
-                  </a>
-                </h4>
-                <p className="description">
-                  Excepteur sint occaecat cupidatat non proident, sunt in culpa
-                  qui officia deserunt mollit anim id est laborum
-                </p>
-              </div>
-            </div>
-            <div className="col-lg-4 col-md-6 mt-5">
-              <div
-                className="icon-box aos-init aos-animate card-service"
-                data-aos="zoom-in-left"
-                data-aos-delay="400"
-              >
-                <div className="icon">
-                  <i class="bi bi-globe" style={{ color: "#d6ff22" }}></i>
-                </div>
-                <h4 className="title">
-                  <a
-                    href="www.google.com"
-                    style={{ color: "black", textdecoration: "none" }}
-                  >
-                    Nemo Enim
-                  </a>
-                </h4>
-                <p className="description">
-                  At vero eos et accusamus et iusto odio dignissimos ducimus qui
-                  blanditiis praesentium voluptatum deleniti atque
-                </p>
-              </div>
-            </div>
-
-            <div className="col-lg-4 col-md-6 mt-5">
-              <div
-                className="icon-box aos-init aos-animate card-service"
-                data-aos="zoom-in-left"
-                data-aos-delay="500"
-              >
-                <div className="icon">
-                  <i class="bi bi-clock" style={{ color: "#4680ff" }}></i>
-                </div>
-                <h4 className="title">
-                  <a
-                    href="www.google.com"
-                    style={{ color: "black", textdecoration: "none" }}
-                  >
-                    Eiusmod Tempor
-                  </a>
-                </h4>
-                <p className="description">
-                  Et harum quidem rerum facilis est et expedita distinctio. Nam
-                  libero tempore, cum soluta nobis est eligendi
-                </p>
-              </div>
-            </div>
+            ))}
           </div>
         </div>
       </section>

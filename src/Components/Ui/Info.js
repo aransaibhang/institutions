@@ -1,9 +1,38 @@
-import React from "react";
+import React, { useEffect } from "react";
 import RotatingGlobe from "./Globe.js";
 import AOS from "aos";
 import "aos/dist/aos.css";
-import { useEffect } from "react";
+import CountUp from "react-countup";
 import "../Styles/Info.css";
+
+const infoData = [
+  {
+    title: "Agents",
+    count: 1000,
+    delay: 100,
+  },
+  {
+    title: "Students",
+    count: 1000,
+    delay: 200,
+  },
+  {
+    title: "Applications",
+    count: 1000,
+    delay: 300,
+  },
+  {
+    title: "Colleges",
+    count: 1000,
+    delay: 400,
+  },
+  {
+    title: "Countries",
+    count: 1000,
+    delay: 500,
+  },
+];
+
 export default function Info() {
   useEffect(() => {
     AOS.init({
@@ -12,6 +41,7 @@ export default function Info() {
       delay: 0,
     });
   }, []);
+
   return (
     <div className="mx-4">
       <div className="section-title aos-init aos-animate" data-aos="zoom-out">
@@ -24,7 +54,7 @@ export default function Info() {
         </div>
 
         <p className="mt-2">
-          Connecting partners and institutions from across the globe
+        Global connections
         </p>
       </div>
       <div className="row">
@@ -35,204 +65,44 @@ export default function Info() {
           >
             <RotatingGlobe />
           </div>
-          <div className="col-3   p-1 text-center" style={{ height: "6rem" }}>
-            <div
-              className="icon-box aos-init aos-animate "
-              data-aos="zoom-in-left"
-              data-aos-delay="100"
-            >
-              <h4 className="data mb-3">
-                <a
-                  href="www.google.com"
+          <div className="col-3 p-1 text-center" style={{ height: "6rem" }}>
+            {infoData.map((item, index) => (
+              <div
+                className="icon-box aos-init aos-animate"
+                data-aos="zoom-in-left"
+                data-aos-delay={item.delay}
+                key={index}
+              >
+                <h4 className="data mb-3">
+                  <a
+                    href="www.google.com"
+                    style={{
+                      color: "black",
+                      textDecoration: "none",
+                      fontSize: "40px",
+                    }}
+                  >
+                    <CountUp end={item.count} duration={5} />
+                    +
+                  </a>
+                </h4>
+                <p
                   style={{
                     color: "black",
-                    textdecoration: "none",
-                    fontSize: "40px",
+                    textDecoration: "none",
+                    fontSize: "20px",
+                    marginTop:"-15px",
+                    marginBottom:'40px'
+                    
                   }}
                 >
-                  1000+
-                </a>
-              </h4>
-              <p
-                style={{
-                  color: "black",
-                  textdecoration: "none",
-                  fontSize: "25px",
-                }}
-              >
-                Students
-              </p>
-            </div>
-            <div
-              className="icon-box aos-init aos-animate "
-              data-aos="zoom-in-left"
-              data-aos-delay="300"
-            >
-              <h4 className="data mb-3">
-                <a
-                  href="www.google.com"
-                  style={{
-                    color: "black",
-                    textdecoration: "none",
-                    fontSize: "40px",
-                  }}
-                >
-                  1000+
-                </a>
-              </h4>
-              <p
-                className=""
-                style={{
-                  color: "black",
-                  textdecoration: "none",
-                  fontSize: "25px",
-                }}
-              >
-                Students
-              </p>
-            </div>
-
-            <div
-              className="icon-box aos-init aos-animate "
-              data-aos="zoom-in-left"
-              data-aos-delay="500"
-            >
-              <h4 className="data mb-3">
-                <a
-                  href="www.google.com"
-                  style={{
-                    color: "black",
-                    textdecoration: "none",
-                    fontSize: "40px",
-                  }}
-                >
-                  1000+
-                </a>
-              </h4>
-              <p
-                className=""
-                style={{
-                  color: "black",
-                  textdecoration: "none",
-                  fontSize: "25px",
-                }}
-              >
-                Students
-              </p>
-            </div>
-            <div
-              className="icon-box aos-init aos-animate "
-              data-aos="zoom-in-left"
-              data-aos-delay="600"
-            >
-              <h4 className="data mb-3">
-                <a
-                  href="www.google.com"
-                  style={{
-                    color: "black",
-                    textdecoration: "none",
-                    fontSize: "40px",
-                  }}
-                >
-                  1000+
-                </a>
-              </h4>
-              <p
-                className=""
-                style={{
-                  color: "black",
-                  textdecoration: "none",
-                  fontSize: "25px",
-                }}
-              >
-                Students
-              </p>
-            </div>
-            <div
-              className="icon-box aos-init aos-animate "
-              data-aos="zoom-in-left"
-              data-aos-delay="800"
-            >
-              <h4 className="data mb-3">
-                <a
-                  href="www.google.com"
-                  style={{
-                    color: "black",
-                    textdecoration: "none",
-                    fontSize: "40px",
-                  }}
-                >
-                  1000+
-                </a>
-              </h4>
-              <p
-                className=""
-                style={{
-                  color: "black",
-                  textdecoration: "none",
-                  fontSize: "25px",
-                }}
-              >
-                Students
-              </p>
-            </div>
+                  {item.title}
+                </p>
+              </div>
+            ))}
           </div>
         </div>
       </div>
     </div>
   );
-}
-{
-  /* <div className="d-flex justify-content-between ">
-
-
-      <div className="d-flex flex-column align-items-center" style={{ color: "red" }}>
-                <div style={{fontSize:"3.4rem",position:'absolute',left:'2px',color:"red"}}>
-                  <i class="bi bi-briefcase"></i>
-                </div>
-                
-                <h4 className="title">
-                  <a href="www.google.com" style={{color: "red", textdecoration: 'none'}}>Agents</a>
-                </h4>
-                <p className="data">
-                 200
-                </p>
-      </div>
-
-
-
-
-      <div className="d-flex flex-column align-items-center" style={{ color: "red" }}>
-      <div style={{fontSize:"3.4rem",position:'absolute',left:'339  px',color:"red"}}>
-                  <i class="bi bi-briefcase"></i>
-                </div>
-                
-                <h4 className="title">
-                  <a href="www.google.com" style={{color: "red", textdecoration: 'none'}}>Agents</a>
-                </h4>
-                <p className="data">
-                 200
-                </p>
-      </div>
-      <div className="d-flex flex-column align-items-center" style={{ color: "red" }}>
-      <div style={{fontSize:"3.4rem",position:'absolute',left:'680px',color:"red"}}>
-                  <i class="bi bi-briefcase"></i>
-                </div>
-                
-                <h4 className="title">
-                  <a href="www.google.com" style={{color: "red", textdecoration: 'none'}}>Agents</a>
-                </h4>
-                <p className="data">
-                 200
-                </p>
-      </div>
-      <div className="d-flex flex-column align-items-center" style={{ color: "red" }}>
-        <i className="bi bi-briefcase text-danger fs-2"><span className="fs-5 mx-2 fw-bold">200</span> </i>
-        <span className="fw-bold fs-4">Colleges</span>
-      </div>
-      <div className="d-flex flex-column align-items-center" style={{ color: "red" }}>
-        <i className="bi bi-briefcase text-danger fs-2"><span className="fs-5 mx-2 fw-bold">200</span> </i>
-        <span className="fw-bold fs-4">Countries</span>
-      </div>
-    </div> */
 }

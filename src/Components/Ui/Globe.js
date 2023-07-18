@@ -66,13 +66,13 @@ const RotatingGlobe = () => {
         topojson: {
           file: "https://raw.githubusercontent.com/MadeByDroids/madebydroids.github.io/master/world-110m-withlakes%20(1).json",
         },
-        oceans: { fill: "#fecb00" },
-        land: { fill: "#222221" },
-        borders: { stroke: "#333333" },
+        oceans: { fill: "#5D97FF" },
+        land: { fill: "#7CFC00" },
+        borders: { stroke: "" },
       })
     );
 
-    globe.loadPlugin(lakes({ fill: "#fecb00" }));
+    globe.loadPlugin(lakes({ fill: "#5D97FF" }));
 
     globe.loadPlugin(planetaryjs.plugins.pings());
 

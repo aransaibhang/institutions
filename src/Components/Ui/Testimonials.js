@@ -83,7 +83,7 @@ export default function Testimonials() {
             return (
               <div className="col-4" key={index}>
                 <div className="border rounded-1 shadow-sm p-4 text-center" style={{width:"25rem",height:"23rem"}}>
-                  <div>
+                  <div style={{height:"140px"}}>
                     <p >
                       <i className="bx bxs-quote-alt-left quote-icon-left"  ></i>
                       {td.description}

@@ -1,0 +1,19 @@
+
+/* Initial styles */
+.custom-button {
+   
+    background-color: #FFFFFF;
+    color: #002c66;
+    padding: 15px 40px;
+    text-decoration: none;
+    border-radius: 5px;
+    margin-left: -50rem;
+   
+  }
+  
+  /* Hover styles */
+  .custom-button:hover {
+    background-color: #002c66;
+    color: #FFFFFF;
+  }
+  

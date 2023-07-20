@@ -2,52 +2,52 @@ import React, { useEffect } from "react";
 import "../Styles/Services.css";
 import AOS from "aos";
 import "aos/dist/aos.css";
+import icon1 from '../Icons/icon1.svg'
+import icon2 from '../Icons/icon2.svg'
+import icon3 from '../Icons/icon3.svg'
+import icon4 from '../Icons/icon4.svg'
+import icon5 from '../Icons/icon5.svg'
+import icon6 from '../Icons/icon6.svg'
 
-const servicesData = [
-  {
-    icon: "bi bi-briefcase briefcase",
-    title: "Lorem Ipsum",
-    description:
-      "Voluptatum deleniti atque corrupti quos dolores et quas molestias excepturi sint occaecati cupiditate non provident",
-  },
-  {
-    icon: "bi bi-book",
-    title: "Dolor Sitema",
-    description:
-      "Minim veniam, quis nostrud exercitation ullamco laboris nisi ut aliquip ex ea commodo consequat tarad limino ata",
-    iconColor: "#e9bf06",
-  },
-  {
-    icon: "bi bi-card-checklist",
-    title: "Sed ut perspiciatis",
-    description:
-      "Duis aute irure dolor in reprehenderit in voluptate velit esse cillum dolore eu fugiat nulla pariatur",
-    iconColor: "#3fcdc7",
-  },
-  {
-    icon: "bi bi-binoculars",
-    title: "Magni Dolores",
-    description:
-      "Excepteur sint occaecat cupidatat non proident, sunt in culpa qui officia deserunt mollit anim id est laborum",
-    iconColor: "#41cf2e",
-  },
-  {
-    icon: "bi bi-globe",
-    title: "Nemo Enim",
-    description:
-      "At vero eos et accusamus et iusto odio dignissimos ducimus qui blanditiis praesentium voluptatum deleniti atque",
-    iconColor: "#d6ff22",
-  },
-  {
-    icon: "bi bi-clock",
-    title: "Eiusmod Tempor",
-    description:
-      "Et harum quidem rerum facilis est et expedita distinctio. Nam libero tempore, cum soluta nobis est eligendi",
-    iconColor: "#4680ff",
-  },
-];
 
 export default function Services() {
+  const servicesData = [
+    {
+      Image: icon1,
+      title: "Provide global visibility",
+    
+    },
+    {
+      Image: icon2,
+      title: "Access to student base from all over the globe",
+     
+      iconColor: "#e9bf06",
+    },
+    {
+      Image: icon3,
+      title: "Access to highly advanced tools and technology",
+      
+      iconColor: "#3fcdc7",
+    },
+    {
+      Image: icon4,
+      title: "Maintain transparency",
+     
+      iconColor: "#41cf2e",
+    },
+    {
+      Image: icon5,
+      title: "Support to address your concerns",
+     
+      iconColor: "#d6ff22",
+    },
+    {
+      Image: icon6,
+      title: "Provide insights",
+      
+      iconColor: "#4680ff",
+    },
+  ];
   useEffect(() => {
     AOS.init({
       duration: 1000,
@@ -88,7 +88,8 @@ export default function Services() {
                   data-aos-delay={index * 100}
                 >
                   <div className="icon">
-                    <i className={service.icon} style={{ color: service.iconColor }}></i>
+                    
+                    <img src={service.Image}></img>
                   </div>
                   <h4 className="title">
                     <a

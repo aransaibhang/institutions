@@ -1,8 +1,16 @@
-import React from 'react';
-import '../Styles/WorkFeatures.css';
-import Featureimg from '../bgImages/features1.png';
-import { RiGpsLine,RiBodyScanLine,RiSunLine,RiStore2Line } from 'react-icons/ri'; // Import the specific icon from react-icons library
-import 'remixicon/fonts/remixicon.css';
+import React from "react";
+import "../Styles/WorkFeatures.css";
+import work1 from "../Icons/work1.jpg";
+import work2 from "../Icons/work2.jpg";
+import work3 from "../Icons/work3.jpg";
+import work4 from "../Icons/work4.jpg";
+import {
+  RiGpsLine,
+  RiBodyScanLine,
+  RiSunLine,
+  RiStore2Line,
+} from "react-icons/ri"; // Import the specific icon from react-icons library
+import "remixicon/fonts/remixicon.css";
 
 export default function WorkFeatures() {
   const workFeaturesData = [
@@ -14,7 +22,7 @@ export default function WorkFeatures() {
         "Attract right students from all backgrounds.",
         "Get access to thousands of student applications.",
       ],
-      image: Featureimg,
+      image: work1,
     },
     {
       title: "Association",
@@ -24,7 +32,7 @@ export default function WorkFeatures() {
         "Collaborate and team work.",
         "Increase the partner and institute network.",
       ],
-      image: Featureimg,
+      image: work2,
     },
     {
       title: "Transparency",
@@ -33,13 +41,13 @@ export default function WorkFeatures() {
         "Transparency verification of student documents and information",
         "Communication with absolute transparency and in all formats.",
       ],
-      image: Featureimg,
+      image: work3,
     },
     {
       title: "Help Students",
       icon: <RiStore2Line />, // Icon for the fourth section
       description: ["Diverse campuses.", "Recognise all eligible students."],
-      image: Featureimg,
+      image: work4,
     },
   ];
 
@@ -62,7 +70,8 @@ export default function WorkFeatures() {
                 aria-selected={index === 0 ? "true" : "false"}
                 role="tab"
               >
-                <div className='titleicon'>{item.icon}</div> {/* Icon is now taken from the data array */}
+                <div className="titleicon">{item.icon}</div>{" "}
+                {/* Icon is now taken from the data array */}
                 <h4 className="d-none d-lg-block">{item.title}</h4>
               </a>
             </li>

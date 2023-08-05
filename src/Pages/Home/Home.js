@@ -26,7 +26,10 @@ export default function Home() {
          
           <Testimonials />
         </div>
-        
+        <div style={{ marginBottom: "150px" }}>
+         
+         <Work />
+       </div>
        
         
       </div>
